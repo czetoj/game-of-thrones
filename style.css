@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    min-height: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+    flex-direction: column;
+    }
+}
+
+article {
+    flex: 5;
+    background-image: url(./assets/site/mapblue.jpg); 
+    background-size: cover;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 1.5rem;
+}
+
+.card {
+    flex: 0 1 calc(12.5% - .5rem);
+    padding: 1rem;
+}
+.active {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card__img img {
+	display: block;
+	border: 0;
+	width: 50px;
+    height: auto;
+    margin: 0 auto;
+}
+.card__img img:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card__img img:active {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card__name {
+    text-transform: uppercase;
+    font-size: .5rem;
+    color: rgb(124, 72, 3);
+    text-align: center;
+    padding: .2rem 0;
+}
+
+.card__name:hover {
+    background-color: #ccc;
+}
+
+.card__name:active {
+    background-color: rgb(176, 176, 176);
+}
+
+aside {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(91, 91, 91);
+    color: white;
+}
+.aside__header {
+    text-align: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-family: meme;
+}
+
+@font-face {
+    font-family: meme;
+    src: url(./fonts/meme.ttf);
+}
+
+.aside__details {
+    flex: 1;
+}
+
+.aside__details-img img {
+    max-width: 100%;
+}
+.aside__details-name-arms {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+}
+
+.aside__details-short {
+    font-size: .7rem;
+    margin-top: .5rem;
+    line-height: 1.1rem;
+}
+
+.aside__search {
+    margin-top: 1rem;
+}
+
+.aside__search form {
+    display: inline-block;
+}  
+
+.aside__search .fa-angle-right{
+    border: 1px solid white;
+    border-radius: 2px;
+    font-weight: bold;
+    padding: .2rem .4rem;
+    line-height: 1.2rem;
+    float: left;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
+
+.aside__search button {
+    float: left;
+    border: none;
+    cursor: pointer;
+    margin-bottom: .5rem;
+}
+
+.aside__search button:hover {
+    background: #ccc;
+}
+
+.aside__search .fa-search {
+    color: black;
+    padding: .2rem;
+    background-color: white;
+    border: 1px solid white;
+    line-height: 1.2rem;
+
+}
+
+.aside__search input {
+    border: 1px solid white;
+    color: rgb(91, 91, 91);;
+    font-size: 1rem;
+    padding: .2rem .4rem;
+    line-height: 1.2rem;
+    float: left;
+
+}
